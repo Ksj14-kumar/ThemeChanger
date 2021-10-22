@@ -1,0 +1,115 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.dark {
+	background-color: black;
+}
+.container {
+	width: 100vw;
+	height: 100vh;
+}
+
+.links {
+	display: flex;
+	justify-content: center;
+	background-color: green;
+}
+.item {
+	border-radius: 15px;
+	/* border: 1px solid red; */
+	width: 20px;
+	height: 20px;
+	margin: 15px;
+}
+.items1 {
+	background-color: maroon;
+}
+.items2 {
+	background-color: #34495e;
+}
+
+.items3 {
+	background-color: #e74c3c;
+}
+
+.items4 {
+	background-color: #9b59b6;
+}
+.items5 {
+	background-color: #16a085;
+}
+
+.items6 {
+	background-color: #ecf0f1;
+}
+
+@media screen and (max-width: 500px) {
+	.container .links {
+		width: 3rem;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 30px;
+		height: 100vh;
+	}
+}
+
+.inner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#checkbox {
+	-webkit-appearance: none;
+	position: relative;
+	width: 200px;
+	height: 100px;
+	background-color: rgb(244, 189, 33);
+	border-radius: 50px;
+	outline: none;
+}
+#checkbox::before {
+	display: block;
+
+	content: "";
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+
+	position: relative;
+	top: 0;
+	left: 0;
+	/* border: 1px solid red; */
+	background-color: green;
+	transition: all 0.4s ease-in-out;
+}
+
+#checkbox:checked:before {
+	transform: translate(101%);
+}
+#checkbox:checked:after {
+}
+#checkbox:checked,
+.container {
+	background-color: red;
+}
+
+select {
+	height: 2rem;
+	position: relative;
+	margin-top: 0.5rem;
+	margin-right: 2rem;
+	border-radius: 5px;
+	border: none;
+	width: 6rem;
+	padding-left: 1.5rem;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+select option:hover {
+	background-color: red;
+	color: whitesmoke;
+}
